@@ -1,1 +1,137 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>mtx3 - Metro</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description=" content="matrix3d">
+
+    <link rel='stylesheet' href='stylesheets/main.css'/>
+    <script data-main='javascript/main' src='javascript/lib/require.min.js'></script>
+
+</head>
+
+<body>
+
+<template id="tmplStationEntry">
+    <div class="mtx3-entry station-entry">
+        <div class="name"></div>
+        <div class="content">
+            <div class="platform a">
+                <div class="predictions heading">
+                    <div class="prediction line">Line
+                        <div class="entry"></div>
+                    </div>
+                    <div class="prediction arrival">Arrival</div>
+                    <div class="prediction destination">Destination</div>
+                </div>
+                <div class="predictions entries"></div>
+            </div>
+            <div class="platform b">
+                <div class="predictions">
+                    <div class="prediction line">Line
+                        <div class="entry"></div>
+                    </div>
+                    <div class="prediction arrival">Arrival</div>
+                    <div class="prediction destination">Destination</div>
+                </div>
+                <div class="predictions entries"></div>
+            </div>
+            <div class="prediction-update">Last update <span class="stamp"></span></div>
+        </div>
+    </div>
+</template>
+
+<template id="tmplPrediction">
+        <div class="prediction line">Line<div class="entry"></div></div>
+        <div class="prediction arrival">Arrival</div>
+        <div class="prediction destination">Destination</div>
+</template>
+
+<template id="tmplIncidents">
+    <div class="incident">
+        <div class="lines">
+            <span class="line"></span>
+            <span class="name"></span>
+        </div>
+        <div class="descriptions"></div>
+        <!-- <div class="datetime pending"></div> -->
+    </div>
+</template>
+
+<template id="tmplIncidentEntry">
+    <div class="description" data-incidentid="">
+        <div class="separator"></div>
+        <span class="message"></span>
+        <span class="dateupdate"></span>
+    </div>
+
+</template>
+
+<div class="mtx3-metro">
+    <header class="header-menu">
+        <button class="header-button"><i class="fa fa-bars fa-2x"></i></button>
+    </header>
+
+    <section class="section-menu">
+        <ul tabindex="0" role="menu" class="menu">
+            <li class="option" tabindex="0" data-menu-option="alerts"><span>Alerts</span></li>
+            <li class="option" tabindex="0" data-menu-option="map"><span>Map</span></li>
+            <li class="option optional" tabindex="0" data-menu-option="prediction"><span>Arrival</span></li>
+            <li class="option" tabindex="0" data-menu-option="usage"><span>Usage</span></li>
+            <li class="option" tabindex="0" data-menu-option="about"><span>About</span></li>
+        </ul>
+    </section>
+
+    <section class="section-map">
+        <canvas class="map-container"></canvas>
+    </section>
+
+    <section class="section-main">
+        <div class="main-container"></div>
+    </section>
+
+    <section class="section-alerts">
+        <div class="incidents-container"></div>
+    </section>
+
+    <section class="section-navigation">
+        <div class="navigation-wrapper">
+            <div class="navigation-lines"></div>
+        </div>
+    </section>
+
+    <section class="section-selector">
+        <div class="selector-wrapper"></div>
+    </section>
+
+    <section class="section-info">
+        <div class="info info-usage">
+            <p>
+                This application displays predicted train arrival times on Washington DC's WMATA Metro system and has
+                been designed primarily for use on a hand held devices.<br><br>
+
+                Individual Metro stations can be viewed by scrolling up or down on the station display.<br><br>
+
+                Metro lines maybe changed by swiping the line selector at the bottom of the page.<br><br>
+
+                Rotating device to landscape mode will display WMATA Metro map.<br>
+            </p>
+        </div>
+        <div class="info info-about">
+            <p>
+                This project has been developed (almost) entirely using the TypeScript scripting language. <br><br>
+
+                It uses features that are typically only available inadvanced browsers and has been tested
+                with latest versions of Safari and Chrome.
+            </p>
+        </div>
+    </section>
+
+</div>
+
+</body>
+
+</html>
