@@ -76,7 +76,7 @@
     </header>
 
     <section class="section-menu">
-        <ul tabindex="0" role="menu" class="menu">
+        <ul class="menu" tabindex="0" role="menu" >
             <li class="option" tabindex="0" data-menu-option="alerts"><span>Alerts</span></li>
             <li class="option" tabindex="0" data-menu-option="map"><span>Map</span></li>
             <li class="option optional" tabindex="0" data-menu-option="prediction"><span>Arrival</span></li>
@@ -90,7 +90,7 @@
     </section>
 
     <section class="section-main">
-        <div class="main-container"></div>
+        <div class="main-container" tabindex="0"></div>
     </section>
 
     <section class="section-alerts">
@@ -111,20 +111,25 @@
         <div class="info info-usage">
             <p>
                 This application displays predicted train arrival times on Washington DC's WMATA Metro system and has
-                been designed primarily for use on a hand held devices.<br><br>
+                been designed primarily for use on a hand held devices. Prediction data is periodically updated
+                approximately every 20 seconds.<br><br>
 
                 Individual Metro stations can be viewed by scrolling up or down on the station display.<br><br>
 
                 Metro lines maybe changed by swiping the line selector at the bottom of the page.<br><br>
 
-                Rotating device to landscape mode will display WMATA Metro map.<br>
+                Rotating device to landscape mode will display WMATA Metro map.<br><br>
+
+                When viewing on a desktop, the main pages displays Metro prediction data in the form of a grid. Each
+                station on the network is displayed and sorted by the shortest prediction times. Navigation through the
+                grid is possble using the keyboard up/down keys<br>
             </p>
         </div>
         <div class="info info-about">
             <p>
                 This project has been developed (almost) entirely using the TypeScript scripting language. <br><br>
 
-                It uses features that are typically only available inadvanced browsers and has been tested
+                It uses features that are typically only available in advanced browsers and has been tested
                 with latest versions of Safari and Chrome.
             </p>
         </div>
